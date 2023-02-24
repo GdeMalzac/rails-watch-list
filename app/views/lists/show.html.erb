@@ -1,5 +1,6 @@
 <div container="class">
 <h1>This is my  <%= @list.name %> List</h1>
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 <div>
   <% @list.bookmarks.each do |bookmark| %>
     <p><%= bookmark.movie.title %></p>
